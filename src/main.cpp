@@ -22,9 +22,11 @@ void setup() {
       delay(500);
   }
   //A configuração do relógio RTC, deve ser chamada após a conexão com a rede WiFi:
-  configTime(-3*GMT, 0, pool_server,     //Aqui é passado o ajuste de fuso horário (-3GMT para o Brasil)
-                        google_server,   //e a lista de links dos provedores ntp's a serem utilizados
-                        time_server);    //Após essa configuração, a conexão com internet não é mais necessária. 
+  configTime(
+    -3*GMT, 0, pool_server,     //Ajuste de fuso horário (-3GMT para o Brasil)
+    google_server,              //Lista de links dos provedores ntp's a serem utilizados
+    time_server                 ////Após essa configuração, a conexão com internet não é mais necessária.
+  ); 
 }
 
 void loop() {
